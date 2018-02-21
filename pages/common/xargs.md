@@ -18,3 +18,7 @@
 - Execute the command once for each input line, replacing any occurrences of the placeholder (here marked as `_`) with the input line:
 
 `{{arguments_source}} | xargs -I _ {{command}} _ {{optional_extra_arguments}}`
+
+- Execute the command once for each input line, with input lines are treated as seperarate invocations of the command:
+
+`cat file... | xargs -n1 command`
